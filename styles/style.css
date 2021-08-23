@@ -1,0 +1,299 @@
+.main {
+  padding: 30px 0 30px;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.details-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 -40px;
+  text-align: center;
+}
+
+.card-box {
+  display: flex;
+  padding: 20px 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.pac-man {
+  position: relative;
+  border: 200px solid #f4b915;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: rotate(32deg);
+}
+.pac-man::after {
+  position: absolute;
+  content: "";
+  border: 200px solid #f4b915;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-40deg);
+  animation: chewUp 2s linear infinite;
+}
+.pac-man::before {
+  position: absolute;
+  content: "";
+  border: 200px solid #f4b915;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: chewDown 2s linear infinite;
+}
+
+.eyes {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  right: 120px;
+  top: 80px;
+}
+
+.eyes::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+  right: 0px;
+  top: 21px;
+}
+
+.food {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  right: 30px;
+  top: 230px;
+}
+
+.food::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  right: 80px;
+  top: 0;
+}
+
+.food::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  right: -80px;
+  top: 0p;
+}
+
+.small-card-box {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.ghost {
+  position: relative;
+  margin: 10px 20px;
+  width: 0;
+  height: 0;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 1;
+}
+
+.first {
+  border-right: 100px solid rgb(241, 159, 6);
+  border-top: 100px solid rgb(241, 159, 6);
+  border-left: 100px solid rgb(241, 159, 6);
+  border-bottom: 100px solid rgb(241, 159, 6);
+}
+
+.second {
+  border-right: 100px solid rgb(247, 6, 6);
+  border-top: 100px solid rgb(247, 6, 6);
+  border-left: 100px solid rgb(247, 6, 6);
+  border-bottom: 100px solid rgb(247, 6, 6);
+}
+
+.third {
+  border-right: 100px solid rgb(126, 126, 235);
+  border-top: 100px solid rgb(126, 126, 235);
+  border-left: 100px solid rgb(126, 126, 235);
+  border-bottom: 100px solid rgb(126, 126, 235);
+}
+
+.fourth {
+  border-right: 100px solid rgb(64, 196, 64);
+  border-top: 100px solid rgb(64, 196, 64);
+  border-left: 100px solid rgb(64, 196, 64);
+  border-bottom: 100px solid rgb(64, 196, 64);
+}
+
+.ghost-eye {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  top: -60px;
+  right: 10px;
+  animation: rotate 6s linear infinite;
+}
+
+.right-eye {
+  left: 10px;
+}
+
+.ghost-eye::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  top: 10px;
+}
+
+.ghost.look-right .ghost-eye::after {
+  right: 0;
+}
+
+.ghost.look-left .ghost-eye::after {
+  left: 0;
+}
+
+.tail {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 34px solid rgb(241, 159, 6);
+  border-top: 34px solid rgb(241, 159, 6);
+  border-left: 34px solid rgb(241, 159, 6);
+  border-bottom: 34px solid rgb(241, 159, 6);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  top: 99px;
+  right: -35px;
+}
+
+.tail::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 34px solid rgb(241, 159, 6);
+  border-top: 34px solid rgb(241, 159, 6);
+  border-left: 34px solid rgb(241, 159, 6);
+  border-bottom: 34px solid rgb(241, 159, 6);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  top: -33px;
+  right: -99px;
+}
+
+.tail::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 34px solid rgb(241, 159, 6);
+  border-top: 34px solid rgb(241, 159, 6);
+  border-left: 34px solid rgb(241, 159, 6);
+  border-bottom: 34px solid rgb(241, 159, 6);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  top: -33px;
+  right: 33px;
+}
+
+.ghost.second .tail,
+.ghost.second .tail::after,
+.ghost.second .tail::before {
+  border-right: 34px solid rgb(247, 6, 6);
+  border-top: 34px solid rgb(247, 6, 6);
+  border-left: 34px solid rgb(247, 6, 6);
+  border-bottom: 34px solid rgb(247, 6, 6);
+}
+
+.ghost.third .tail,
+.ghost.third .tail::after,
+.ghost.third .tail::before {
+  border-right: 34px solid rgb(126, 126, 235);
+  border-top: 34px solid rgb(126, 126, 235);
+  border-left: 34px solid rgb(126, 126, 235);
+  border-bottom: 34px solid rgb(126, 126, 235);
+}
+
+.ghost.fourth .tail,
+.ghost.fourth .tail::after,
+.ghost.fourth .tail::before {
+  border-right: 34px solid rgb(64, 196, 64);
+  border-top: 34px solid rgb(64, 196, 64);
+  border-left: 34px solid rgb(64, 196, 64);
+  border-bottom: 34px solid rgb(64, 196, 64);
+}
+/* . @media (max-width: 1023px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 520px) {
+} */
+
+/* ---------------------------------------------------ANIMATION */
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes chewUp {
+  from {
+    transform: translate(-50%, -50%) rotate(-40deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-70deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-40deg);
+  }
+}
+@keyframes chewDown {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
