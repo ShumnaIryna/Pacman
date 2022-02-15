@@ -248,3 +248,14 @@
     transform: translate(-50%, -50%) rotate(0deg);
   }
 }
+
+@media (max-width: 900px) {
+  .small-card-box {
+    flex-direction: column;
+  }
+
+  .ghost.look-right,
+  .ghost.look-left {
+    margin-bottom: 100px;
+  }
+}
